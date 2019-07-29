@@ -1,0 +1,3 @@
+# Angular
+
+Creating basic applications using Angular JS for an easy walkthrough to the modules, directives, Expressions, Models...
