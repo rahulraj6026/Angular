@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie review</title>
+	<link href="http://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
+    <link href="main.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="MainController.js"></script>
+</head>
+  <body ng-app="myApp">
+    <div class="header">
+      <div class="container">
+        <h1>Pizza Reviews</h1>
+      </div>
+    </div>
+	<div class="main" ng-controller="MainController">
+		<div class="container">
+			<h1>{{title}}</h1>
+			<h2>{{promo}}</h2>
+			<div ng-repeat="p in pizzas" class='col-md-8'>
+				<div class="container">
+					<div class="thumbnail">
+						<p class="name"><strong>{{p.name | uppercase}}</strong></p>
+						<p class="price">{{p.price|currency}}</p>
+						<img ng-src="{{p.lnk}}" style="width:120px;height:120px;">
+						
+						<div class="rating">
+							<p class="likes" ng-click="plusOne($index)">+{{p.likes}}</p>
+							<p class="dislikes" ng-click="minusOne($index)">-{{p.dislikes}}</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+	</div>
+</body>
+</html>

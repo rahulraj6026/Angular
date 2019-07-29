@@ -1,0 +1,20 @@
+<!-- Use of ng-init in various ways firstly to add color to text-editor and also add that same input.
+Second is sum of two numbers
+Third is object and also arrays can be accessed like this -->
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+	<!-- <div ng-app="" ng-init="mycol='red'">
+		<input style="background-color: {{mycol}}" ng-model="mycol">
+	</div> --> 
+	<!-- <div ng-app="" ng-init="q=1;s=2">
+		<p> {{q+s}}</p>
+	</div> -->
+	<div ng-app="" ng-init="person={f:'k',l:'m'}">
+		<p>{{person.f}}</p>
+	</div>
+</body>
+</html>

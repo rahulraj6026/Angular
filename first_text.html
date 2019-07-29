@@ -1,0 +1,31 @@
+<!-- Use of ng-app and ng-controller
+	
+	The ng-app directive tells AngularJS that the <div> element is the "owner" of an AngularJS application.
+
+	The ng-model directive binds the value of the input field to the application variable name.
+
+	The ng-bind directive binds the content of the <p> element to the application variable name.
+
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>angular js</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="mctrl">
+		First: <input type="text" ng-model="fst">
+		Second: <input type="text" ng-model="snt"><br>
+		<p> Full: <span ng-bind="fst+' '+snt"></span></p>
+		<!-- Full: {{fst+" "+snt}}; -->
+	</div>
+	<script type="text/javascript">
+		var app = angular.module("myApp",[]);
+		app.controller('mctrl', function($scope){
+			$scope.fst = "Rahul";
+			$scope.snt = "Roy";
+		});
+	</script>
+</body>
+</html>
